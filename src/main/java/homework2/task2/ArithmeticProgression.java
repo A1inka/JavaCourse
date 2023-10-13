@@ -16,7 +16,9 @@ public class ArithmeticProgression {
         for (int i = 1; i < amountOfElements; i ++ ) {
             sum += (initialElement + progressionDifference * i);
         }
+
         System.out.println(sum);
+
     }
 
 }
