@@ -8,14 +8,14 @@ public class IsPrime {
 
         Scanner in = new Scanner(System.in);
         System.out.println("Введите число: ");
-        int num = in.nextInt();
+        long num = in.nextInt();
 
         if (num % 2 == 0) {
             System.out.println("Составное число");
             return;
         }
 
-        for (long i = 3; i <= (Math.sqrt(num) + 1); i = i + 2) {
+        for (int i = 3; i <= (Math.sqrt(num) + 1); i = i + 2) {
             if (num % i == 0) {
                 System.out.println("Составное число");
                 return;
