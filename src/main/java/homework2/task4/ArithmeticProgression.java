@@ -1,6 +1,6 @@
-package homework2;
+package homework2.task4;
 
-public class task4 {
+public class ArithmeticProgression {
 
     public static void main(String[] args) {
 

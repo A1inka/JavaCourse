@@ -1,8 +1,8 @@
-package homework2;
+package homework2.task3;
 
 import java.util.Scanner;
 
-public class task3 {
+public class IsPrime {
 
     public static void main(String[] args) {
 
