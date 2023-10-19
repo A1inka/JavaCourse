@@ -1,14 +1,15 @@
-package homework2.task1;
+package myCourse;
 
 import java.util.Scanner;
 
-public class IsPrime {
+public class task3 {
 
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         System.out.println("Введите число: ");
         long num = in.nextInt();
+        in.close();
 
         if (num % 2 == 0) {
             System.out.println("Составное число");

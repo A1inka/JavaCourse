@@ -1,6 +1,6 @@
-package homework1.task1;
+package myCourse;
 
-public class Hello {
+public class task1 {
 
     public static void main(String[] args) {
         System.out.println("Hello, Java ^^");
