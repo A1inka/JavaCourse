@@ -9,6 +9,11 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    @Override
+    public String toString() {
+        return "Circle (" + getX() + ", " + getY() + "), " + getRadius() + ": ";
+    }
+
     public int getRadius() {
         return radius;
     }

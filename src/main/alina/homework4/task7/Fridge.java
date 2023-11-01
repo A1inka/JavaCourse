@@ -1,6 +1,6 @@
-package homework3.task5;
+package homework4.task7;
 
-public class Fridge extends Appliance{
+public class Fridge extends Appliance {
 
     private boolean miniFridge;
     private boolean hasFreezer;
@@ -8,8 +8,9 @@ public class Fridge extends Appliance{
     private int volume;
 
     public Fridge(double price, String description, double length, double width, double height, double weight,
-                  int batteryLife, double power) {
-        super(price, description, length, width, height, weight, batteryLife, power);
+                  int batteryLife, double power, boolean miniFridge, boolean hasFreezer, int freezerTemperature,
+                  int volume, String country, boolean gharantip) {
+        super(price, description, length, width, height, weight, batteryLife, power, country, gharantip);
         this.miniFridge = miniFridge;
         this.hasFreezer = hasFreezer;
         this.freezerTemperature = freezerTemperature;
@@ -62,18 +63,29 @@ public class Fridge extends Appliance{
             if (isHasFreezer()) {
                 System.out.println("Холодильник с морозильной камерой");
             } else {
-                System.out.println("Холодильник");
+                System.out.println("Холодильник без морозильной камеры");
             }
-            System.out.println("Цена: " + getPrice() + "Р");
-            System.out.println("Описание: " + getDescription());
-            System.out.println("Габариты: " + getLength() + " см * " + getWidth() + " см * " + getHeight() + " см");
-            System.out.println("Вес: " + getWeight() + " кг");
-            System.out.println("Объём: " + getVolume() + " л");
-            System.out.println("Автономное сохранение холода: " + getBatteryLife() + " ч");
-            if (isHasFreezer()) {
-                System.out.println("Температура морозильной камеры: " + getFreezerTemperature() + " °C");
+        }
+        System.out.println("Цена: " + getPrice() + " Р");
+        System.out.println("Описание: " + getDescription());
+        System.out.println("Габариты: " + getLength() + " м * " + getWidth() + " м * " + getHeight() + " м");
+        System.out.println("Вес: " + getWeight() + " кг");
+        System.out.println("Объём: " + getVolume() + " л");
+        System.out.println("Автономное сохранение холода: " + getBatteryLife() + " ч");
+        if (isHasFreezer()) {
+            System.out.println("Температура морозильной камеры: " + getFreezerTemperature() + " °C");
+        }
+        System.out.println("Мощность: " + getPower() + " Вт");
+        if (getCountry() != "Россия") {
+            System.out.println("Страна " + getCountry());
+            if (isGharantip()) {
+                System.out.println("Гарантия: есть");
+            } else {
+                System.out.println("Гарантия: нет");
             }
-            System.out.println("Мощность: " + getPower() + " Вт");
+        }
+        else {
+            System.out.println("Страна: Россия");
         }
     }
 }

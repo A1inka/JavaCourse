@@ -7,8 +7,9 @@ public class WashingMachine extends Appliance{
     private int maxLoading;
 
     public WashingMachine(double price, String description, double length, double width, double height, double weight,
-                          int batteryLife, double power) {
-        super(price, description, length, width, height, weight, batteryLife, power);
+                          int batteryLife, double power, boolean dryer, int maxSpeedSpin, int maxLoading, String country,
+                          boolean gharantip) {
+        super(price, description, length, width, height, weight, batteryLife, power, country, gharantip);
         this.dryer = dryer;
         this.maxLoading = maxLoading;
         this.maxSpeedSpin = maxSpeedSpin;
@@ -46,13 +47,24 @@ public class WashingMachine extends Appliance{
         else {
             System.out.println("Стиральная машина");
         }
-        System.out.println("Цена: " + getPrice() + "Р");
+        System.out.println("Цена: " + getPrice() + " Р");
         System.out.println("Описание: " + getDescription());
-        System.out.println("Габариты: " + getLength() + " см * " + getWidth() + " см * " + getHeight() + " см");
+        System.out.println("Габариты: " + getLength() + " м * " + getWidth() + " м * " + getHeight() + " м");
         System.out.println("Вес: " + getWeight() + " кг");
         System.out.println("Максимальная загрузка вещей: " + getMaxLoading() + " кг");
         System.out.println("Скорость отжима: " + getMaxSpeedSpin() + " об/мин");
         System.out.println("Автономное время работы: " + getBatteryLife() + " ч");
         System.out.println("Мощность: " + getPower() + " Вт");
+        if (getCountry() != "Россия") {
+            System.out.println("Страна " + getCountry());
+            if (isGharantip()) {
+                System.out.println("Гарантия: есть");
+            } else {
+                System.out.println("Гарантия: нет");
+            }
+        }
+        else {
+            System.out.println("Страна: Россия");
+        }
     }
 }

@@ -23,7 +23,7 @@ public class AnnotatedImage {
             }
             else {
                 Rectangle rectangle = (Rectangle) figure;
-                if (rectangle.getX() >= x && rectangle.getY() >= y && rectangle.getX2() <= x && rectangle.getY2() <= y) {
+                if (rectangle.getX() <= x && rectangle.getY() <= y && rectangle.getX2() >= x && rectangle.getY2() >= y) {
                     return annotation;
                 }
             }
@@ -33,13 +33,12 @@ public class AnnotatedImage {
 
     public Annotation findByLabel(String label) {
         for (Annotation annotation: annotations) {
-            if (annotation.getLabel().equals(label)) {
+            if (annotation.getLabel().contains(label)) {
                 return annotation;
             }
         }
         return null;
     }
-
 
     public String getImagePath() {
         return this.imagePath;

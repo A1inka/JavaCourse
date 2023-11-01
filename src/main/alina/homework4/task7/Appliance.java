@@ -1,16 +1,17 @@
-package homework3.task5;
+package homework4.task7;
 
 public abstract class Appliance {
 
     protected double power;
     protected double price;
     protected String description;
-
     protected double length, width, height, weight;
     protected int batteryLife;
+    protected String country;
+    protected boolean gharantip;
 
     public Appliance(double price, String description, double length, double width, double height, double weight,
-                     int batteryLife, double power) {
+                     int batteryLife, double power, String country, boolean gharantip) {
         this.price = price;
         this.description = description;
         this.length = length;
@@ -19,6 +20,8 @@ public abstract class Appliance {
         this.weight = weight;
         this.batteryLife = batteryLife;
         this.power = power;
+        this.gharantip = gharantip;
+        this.country = country;
     }
 
     public double getPrice() {
@@ -83,6 +86,22 @@ public abstract class Appliance {
 
     public void setPower(double power) {
         this.power = power;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public boolean isGharantip() {
+        return gharantip;
+    }
+
+    public void setGharantip(boolean gharantip) {
+        this.gharantip = gharantip;
     }
 
     public abstract void printInformation();
