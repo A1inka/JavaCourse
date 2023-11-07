@@ -1,5 +1,10 @@
-package homework4.task7;
+package homework4.task7.Launch;
 
+import homework4.task7.Appliance.*;
+import homework4.task7.Order.Order;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 
 public class OnlineStoreOfHouseholdAppliances {
@@ -46,9 +51,12 @@ public class OnlineStoreOfHouseholdAppliances {
         appliancesList.add(washingMachineWithDryer);
         appliancesList.add(washingMachineWithoutDryer);
 
-        for (Appliance a: appliancesList) {
-            a.printInformation();
-            System.out.println(" ");
-        }
+        ArrayList<Appliance> list = new ArrayList<>();
+        list.add(washingMachineWithDryer);
+        list.add(fridgeMini);
+        list.add(electricStove);
+        Order order = new Order("+79465337072", list, "Алина", "Баранова", "Дмитриевна");
+        order.collectOrder();
+        order.sendNotification();
     }
 }

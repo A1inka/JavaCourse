@@ -1,4 +1,6 @@
-package homework4.task7;
+package homework4.task7.Appliance;
+
+import homework4.task7.Appliance.Appliance;
 
 public class RobotVacuumCleaner extends Appliance {
 
@@ -38,5 +40,10 @@ public class RobotVacuumCleaner extends Appliance {
         else {
             System.out.println("Страна: Россия");
         }
+    }
+
+    @Override
+    public String printName() {
+        return ("Робот-пылесос");
     }
 }

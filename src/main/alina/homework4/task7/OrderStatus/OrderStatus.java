@@ -1,4 +1,4 @@
-package homework4.task7;
+package homework4.task7.OrderStatus;
 
 public enum OrderStatus {
     CREATED,

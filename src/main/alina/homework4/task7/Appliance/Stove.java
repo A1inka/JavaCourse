@@ -1,4 +1,6 @@
-package homework4.task7;
+package homework4.task7.Appliance;
+
+import homework4.task7.Appliance.Appliance;
 
 public class Stove extends Appliance {
 
@@ -55,4 +57,10 @@ public class Stove extends Appliance {
             System.out.println("Страна: Россия");
         }
     }
+
+    @Override
+    public String printName() {
+        return("Плита: " + getType());
+    }
+
 }
