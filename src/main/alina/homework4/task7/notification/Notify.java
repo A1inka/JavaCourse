@@ -1,6 +1,6 @@
-package homework4.task7.Notification;
+package homework4.task7.notification;
 
-import homework4.task7.Appliance.Appliance;
+import homework4.task7.appliance.Appliance;
 
 import java.math.RoundingMode;
 import java.text.NumberFormat;

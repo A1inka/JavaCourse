@@ -1,9 +1,9 @@
-package homework4.task7.Order;
+package homework4.task7.order;
 
-import homework4.task7.Appliance.Appliance;
-import homework4.task7.OrderStatus.AvailableForReceiving;
-import homework4.task7.Notification.Notify;
-import homework4.task7.OrderStatus.OrderStatus;
+import homework4.task7.appliance.Appliance;
+import homework4.task7.orderStatus.AvailableForReceiving;
+import homework4.task7.notification.Notify;
+import homework4.task7.orderStatus.OrderStatus;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

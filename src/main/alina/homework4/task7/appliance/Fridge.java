@@ -1,6 +1,4 @@
-package homework4.task7.Appliance;
-
-import homework4.task7.Appliance.Appliance;
+package homework4.task7.appliance;
 
 public class Fridge extends Appliance {
 
@@ -96,12 +94,10 @@ public class Fridge extends Appliance {
         if (isMiniFridge()) {
             if (isHasFreezer()) {
                 return ("Мини-холодильник с морозильной камерой");
-            }
-            else {
+            } else {
                 return ("Мини-холодильник");
             }
-        }
-        else {
+        } else {
             if (isHasFreezer()) {
                 return ("Холодильник с морозильной камерой");
             } else {

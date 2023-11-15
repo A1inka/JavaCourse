@@ -1,10 +1,8 @@
-package homework4.task7.Launch;
+package homework4.task7.launch;
 
-import homework4.task7.Appliance.*;
-import homework4.task7.Order.Order;
+import homework4.task7.appliance.*;
+import homework4.task7.order.Order;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
 
 public class OnlineStoreOfHouseholdAppliances {

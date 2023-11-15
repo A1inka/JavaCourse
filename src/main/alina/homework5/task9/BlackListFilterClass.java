@@ -46,4 +46,3 @@ public class BlackListFilterClass implements BlackListFilter{
         comments.addAll(filteredComments); // 2 и 3 версия
     }
 }
-

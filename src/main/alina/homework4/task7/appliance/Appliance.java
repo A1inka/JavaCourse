@@ -1,4 +1,4 @@
-package homework4.task7.Appliance;
+package homework4.task7.appliance;
 
 public abstract class Appliance {
 
@@ -105,5 +105,6 @@ public abstract class Appliance {
     }
 
     public abstract void printInformation();
+
     public abstract String printName();
 }

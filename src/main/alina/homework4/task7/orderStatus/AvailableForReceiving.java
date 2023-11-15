@@ -1,4 +1,4 @@
-package homework4.task7.OrderStatus;
+package homework4.task7.orderStatus;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

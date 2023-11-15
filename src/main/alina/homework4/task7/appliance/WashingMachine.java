@@ -1,6 +1,4 @@
-package homework4.task7.Appliance;
-
-import homework4.task7.Appliance.Appliance;
+package homework4.task7.appliance;
 
 public class WashingMachine extends Appliance {
 
