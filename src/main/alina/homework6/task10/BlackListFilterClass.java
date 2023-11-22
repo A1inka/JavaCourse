@@ -1,10 +1,5 @@
 package homework6.task10;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.function.Predicate;
-
 public class BlackListFilterClass implements BlackListFilter {
     public boolean isTypo(String word, String badWord) {
         int diff = 0;

@@ -2,6 +2,7 @@ package homework6.task11;
 
 import java.time.DayOfWeek;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Menu {
     private HashMap<Kitchener, Set<Dish>> menu;
@@ -36,7 +37,7 @@ public class Menu {
             for (Dish dish : dishes) {
                 boolean hasIngredients = true;
                 for (String product : dish.getNecessaryIngredients()) {
-                    if (!feast.getAvailableProducts().contains(product)) {
+                    if (feast.getNotAvailableProducts().contains(product)) {
                         hasIngredients = false;
                         break;
                     }
@@ -56,4 +57,10 @@ public class Menu {
 
         return (menuList.subList(0, Math.min(menuSize, menuList.size())));
     }
+    public List<Dish> filterMenuByPredicate(List<Dish> menu, DishPredicate predicate) {
+        return menu.stream()
+                .filter(predicate::test)
+                .collect(Collectors.toList());
+    }
+
 }

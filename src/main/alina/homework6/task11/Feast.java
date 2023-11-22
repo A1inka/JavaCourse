@@ -6,11 +6,11 @@ import java.util.Set;
 
 public class Feast {
     private LocalDate feastDate;
-    private Set<String> availableProducts;
+    private Set<String> notAvailableProducts;
 
     public Feast(LocalDate feastDate, Set<String> availableProducts) {
         this.feastDate = feastDate;
-        this.availableProducts = availableProducts;
+        this.notAvailableProducts = availableProducts;
     }
 
     public DayOfWeek getFeastDayOfWeek() {
@@ -19,14 +19,14 @@ public class Feast {
     }
 
     public void addProduct(String product) {
-        availableProducts.add(product);
+        notAvailableProducts.add(product);
     }
 
     public void removeProduct(String product) {
-        availableProducts.remove(product);
+        notAvailableProducts.remove(product);
     }
 
-    public Set<String> getAvailableProducts() {
-        return availableProducts;
+    public Set<String> getNotAvailableProducts() {
+        return notAvailableProducts;
     }
 }

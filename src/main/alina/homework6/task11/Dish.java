@@ -1,11 +1,12 @@
 package homework6.task11;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class Dish {
     private String nameOfTheDish;
     private Set<String> necessaryIngredients;
-    private String category;
+    private final DishCategory category;
     private int kingsRating;
     private int courtiersRating;
     // мои дополнительные параметры
@@ -13,16 +14,11 @@ public class Dish {
     private int cookingTime;
     private String type;
 
-    public Dish(String nameOfTheDish, Set<String> necessaryIngredients, String category, int kingsRating,
+    public Dish(String nameOfTheDish, Set<String> necessaryIngredients, DishCategory category, int kingsRating,
                 int courtiersRating, int difficultyOfPreparation, int cookingTime, String type) {
         this.nameOfTheDish = nameOfTheDish;
         this.necessaryIngredients = necessaryIngredients;
-        if (category.equalsIgnoreCase("закуска") || category.equalsIgnoreCase("горячее") ||
-                category.equalsIgnoreCase("десерт")) {
-            this.category = category.toLowerCase();
-        } else {
-            throw new IllegalArgumentException("Неверно задана категория блюда!");
-        }
+        this.category = category;
         if (kingsRating >= 0 && kingsRating <= 100) {
             this.kingsRating = kingsRating;
         } else {
@@ -67,17 +63,8 @@ public class Dish {
         this.necessaryIngredients = necessaryIngredients;
     }
 
-    public String getCategory() {
+    public DishCategory getCategory() {
         return category;
-    }
-
-    public void setCategory(String category) {
-        if (category.equalsIgnoreCase("закуска") || category.equalsIgnoreCase("горячее") ||
-                category.equalsIgnoreCase("десерт")) {
-            this.category = category.toLowerCase();
-        } else {
-            throw new IllegalArgumentException("Неверно задана категория блюда!");
-        }
     }
 
     public int getKingsRating() {
@@ -145,4 +132,18 @@ public class Dish {
     public String toString() {
         return nameOfTheDish;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dish dish = (Dish) o;
+        return Objects.equals(nameOfTheDish, dish.nameOfTheDish);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfTheDish);
+    }
+
 }
